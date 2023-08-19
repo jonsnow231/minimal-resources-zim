@@ -47,4 +47,4 @@ DONE.
 *********************
 *********************
  
-For installed if this doesn't work, try putting in %appdata% instead of directory.
+If you installed on system, if this doesn't work, try putting in %appdata% instead of zim directory.
