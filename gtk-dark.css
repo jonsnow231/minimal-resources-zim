@@ -1,0 +1,505 @@
+/*
+*******
+MINIMALIST-RESOURCES
+*******
+
+https://github.com/jonsnow231/minial-resources-zim
+
+
+***************************************
+
+Assets edited from https://github.com/astrit/css.gg using https://www.svgviewer.dev/ 
+
+Code adapted from https://docs.gtk.org and random gtk themes, primarily https://github.com/vinceliuice/Graphite-gtk-theme
+
+***************************************
+*/
+
+
+
+
+/*****
+Body
+*****/
+
+/* Changes text highlight color */
+entry selection, label selection, textview text selection:focus, textview text selection, widget.view:selected, .view:selected {
+  color: #000000;
+  background-color: #dcdcdc;
+}
+
+
+/* Colors index pane (background-color) and text (color) */
+.view {
+background-color: #000000;
+color: #a5a57f;
+}
+
+
+
+/* sets background color of main body */
+textview text {
+background-color: #000000;
+}
+
+
+
+
+.background {
+/* Changes menu popup backgrounds */
+background-color: #0f0f0f; 
+/* Changes cursor and some menu colors */
+color: #ffffff
+}
+
+
+
+
+
+
+
+/*****
+BUTTONS
+*****/
+
+
+/* Changes the color of some disabled menu buttons */
+button:disabled {
+background-color: rgba(255, 255, 255, 0.04);
+color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* changes color of active tab */
+button:checked {
+background-color: #bfbfbf;
+color: #000000;
+}
+
+
+
+
+/* sets size of buttons at the top */
+button.image-button {
+min-width: 36px;
+padding: 1px;
+}
+
+
+
+/* Changes size and color of line separator between buttons and context menu */ 
+separator {
+min-width: 1px;
+min-height: 1px;
+background-color: #5d5d5d;
+}
+
+
+
+
+
+
+
+/*****
+Checkmarks
+*****/
+
+
+/* sets padding between check marks and text in menu */
+menu menuitem check:dir(ltr) {
+margin-right: 20px;
+}
+
+menu menuitem check:dir(rtl), menu menuitem radio:dir(rtl) {
+margin-left: 20px;
+}
+
+
+
+/* adds icons for check marks */ 
+check {
+-gtk-icon-source: -gtk-recolor(url("assets/white/square-white.svg"));
+}
+
+
+check:checked {
+-gtk-icon-source: -gtk-recolor(url("assets/white/checkmarksquare-white.svg"));
+}
+
+
+
+/* color of menu checkboxes. Deleting messes up svg.  */
+treeview.view check:hover, treeview.view check:selected {
+box-shadow: none;
+background-color: #adadad;
+}
+
+
+
+
+
+
+/*****
+Links
+*****/
+
+
+
+/* Changes color of links inside menus (not in notebook) */
+button.link:link, button.link:link:focus, button.link:link:hover, button.link:link:active {
+color: #78c3cf;
+}
+
+/* Changes color of visited links inside menus */
+button.link:visited, button.link:visited:focus, button.link:visited:hover, button.link:visited:active {
+color: #789dcf;
+}
+
+/* adds underline to links inside menus */
+button.link > label {
+text-decoration-line: underline;
+}
+
+
+
+
+
+
+
+
+
+
+/*****
+Scrollbar
+*****/
+ 
+
+/* sets color of scroll bar */ 
+scrollbar slider {
+min-width: 8px;
+min-height: 8px;
+border: 4px 3d3d3d;
+border-radius: 9999px;
+background-clip: none;
+background-color: #32432e;
+}
+
+
+/* sets color of scroll bar on hover */ 
+scrollbar slider:hover {
+background-color: #445b3e;
+}
+
+/* sets color of scroll bar on click/drag */ 
+scrollbar slider:active {
+background-color: #445b3e;
+}
+
+
+
+/* Changes background color of scroll bar */ 
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
+border-color: #181818;
+background-color: #181818;
+}
+
+
+
+/* Changes scrollbar background color when sliding and hovering */
+scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
+background-color: #2a2a2a;
+}
+
+
+/* Sets minimum width of horizontal scroll bar */
+scrollbar.horizontal slider {
+min-width: 20px;
+}
+
+
+/* Sets minimum width of vertical scroll bar */
+scrollbar.vertical slider {
+min-height: 20px;
+}
+
+
+/* Sets width of scroll bar background */
+scrollbar button {
+min-width: 16px;
+min-height: 20px;
+padding: 0;
+border-radius: 1;
+}
+
+
+/* Sets arrow icons for scroll bars */
+scrollbar.vertical button.down {
+-gtk-icon-source: -gtk-recolor(url("assets/white/chevrondown-white.svg"));
+}
+
+scrollbar.vertical button.up {
+-gtk-icon-source: -gtk-recolor(url("assets/white/chevronup-white.svg"));
+}
+
+scrollbar.horizontal button.down {
+-gtk-icon-source: -gtk-recolor(url("assets/white/chevronright-white.svg"));
+}
+
+scrollbar.horizontal button.up {
+-gtk-icon-source: -gtk-recolor(url("assets/white/chevronleft-white.svg"));
+}
+
+
+
+
+
+
+
+
+
+/*****
+Frames
+*****/
+
+ 
+/* Changes most frame color and size for notebooks and opening new notebooks */
+frame > border,
+.frame {
+margin: 0;
+padding: 0;
+border: 1px solid #5a5959;
+border-radius: 0;
+box-shadow: none;
+}
+
+
+/* Chages frames in certain pop ups, such as search */
+actionbar > revealer > box {
+padding: 6px;
+border-top: 1px solid #5a5959;
+background-color: #000000;
+background-clip: none;
+}
+
+
+
+
+
+
+/*****
+Sidebar
+*****/
+ 
+
+/* changes size of directory items on left sidebar of file chooser such as when importing a file */
+placessidebar.sidebar row {
+min-height: 32px;
+margin: 0;
+padding: 0;
+border-radius: 6px;
+}
+
+
+
+/* Padding between directory icon and directory text in file chooser. Also affects search.  */
+placessidebar.sidebar row image.sidebar-icon:dir(ltr) {
+padding-right: 8px;
+}
+
+
+
+/*****
+Menus
+*****/
+
+
+
+
+/* Highlights selected rows in menus */
+.view:selected {
+color: #000000;
+background-color: #e6e6e6;
+}
+
+
+/* sets hover highlight for rows in menu/index */
+.view:hover {
+box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.3);
+}
+
+
+
+/* Padding in menu bar and background color of menu bar */
+menubar,
+.menubar {
+padding: 0;
+background-color: #000000;
+}
+
+
+
+/* Padding between menu bar items and color of menu bar text */
+menubar > menuitem,
+.menubar > menuitem {
+padding: 8px;
+color: #ffffff;
+}
+
+
+
+/* Changes color of menu bar item selected */
+menubar > menuitem:hover,
+.menubar > menuitem:hover {
+background-color: #ffffff;
+color: #000000;
+}
+
+
+
+
+/* Changes context menu color and padding */
+menu,
+.menu,
+.context-menu {
+margin: 3px;
+padding: 6px;
+background-color: #1d1d1d;
+border-radius: 8px;
+border: 1px solid #dbdee5;
+}
+
+
+/* styles drop-down and context-menu */
+menu menuitem,
+.menu menuitem,
+.context-menu menuitem {
+min-height: 20px;
+min-width: 40px;
+padding: 4px 8px;
+color: white;
+font: initial;
+text-shadow: none;
+border-radius: 6px;
+}
+
+
+
+/* Changes color of menu items when hovering */
+menu menuitem:hover,
+.menu menuitem:hover,
+.context-menu menuitem:hover {
+background-color: alpha(CurrentColor, 0.4);
+color: #ffffff;
+}
+
+
+
+
+/* Changes color of disabled menu items */
+menu menuitem:disabled,
+.menu menuitem:disabled,
+.context-menu menuitem:disabled {
+color: alpha(CurrentColor, 0.4);
+}
+
+
+
+/* Changes color of disabled menu item hotkeys */
+menu menuitem:disabled accelerator,
+.menu menuitem:disabled accelerator,
+.context-menu menuitem:disabled accelerator {
+color: alpha(CurrentColor, 0.4);
+}
+
+
+/* adds right-facing arrow to some menu items */
+menu menuitem arrow:dir(ltr),
+.menu menuitem arrow:dir(ltr),
+.context-menu menuitem arrow:dir(ltr) {
+-gtk-icon-source: -gtk-recolor(url("assets/white/chevronright-white.svg"));
+margin-left: 8px;
+}
+
+
+
+/* adds left-facing arrow to some menu items */
+menu menuitem arrow:dir(rtl),
+.menu menuitem arrow:dir(rtl),
+.context-menu menuitem arrow:dir(rtl) {
+-gtk-icon-source: -gtk-recolor(url("assets/white/chevronleft-white.svg"));
+margin-right: 8px;
+}
+
+
+/* Changes size of arrows inside menus and context menu */
+menu menuitem arrow,
+.menu menuitem arrow,
+.context-menu menuitem arrow {
+min-height: 16px;
+min-width: 16px;
+}
+
+
+/* Changes color of hover over some menu items/headers  */
+treeview.view header button:hover, row.activatable:hover {
+box-shadow: inset 20 20 20 9999px alpha(CurrentColor, 0.5);
+}
+
+
+/* Adds buffer between menu items */
+menu separator,
+.menu separator,
+.context-menu separator {
+margin: 6px 2;
+}
+
+
+
+
+/* Changes padding for menu headers and adds color to some unselected menu headers */
+tabbox > tab, notebook > header tab {
+min-height: 16px;
+min-width: 16px;
+padding: 2px 12px;
+border: none;
+outline: none;
+background-clip: none;
+color: #ffffff;
+font-weight: 800;
+border-radius: 2px;
+}
+
+
+/* Changes cover of pop up menu headers when you hover over them */
+tabbox > tab:hover, notebook > header tab:hover {
+background-color: alpha(CurrentColor, 0.3);
+color: #ffffff;
+}
+
+
+
+
+
+
+/* Changes color of headers that are selected */
+tabbox > tab:checked, notebook > header tab:checked {
+transition: none;
+background-color: #303030;
+color: #ffffff;
+box-shadow: none;
+}
+
+
+
+
+/* outlines menu drop downs and context menu */
+.csd.popup decoration {
+border-radius: 12px;
+border-radius: 14px;
+border: 2px solid #a6a6a6;
+background-clip: border-box;
+}
+
+
+
+
