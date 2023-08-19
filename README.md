@@ -7,7 +7,7 @@ Custom theme for Zim. Only 10kb including assets. Absolute black backgrounds and
 
 Zim instructions for Portable on Windows: 
 
-  1) Unzip the source. All you need is the minimal-resources folder.
+  1) Go to releases on right-hand of page and download source. Unzip the source. All you need is the minimal-resources folder.
   2) Add minimal-resources folder with .css and assets to Zim\share\themes\
   3) Go to Zim\etc\gtk-3.0\settings.ini  (create directory and .ini file if it doesn't exist) and input:
       [Settings]
