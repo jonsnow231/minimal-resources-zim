@@ -1,0 +1,1395 @@
+
+
+/*
+
+*******MINIMALIST-RESOURCES************
+
+https://github.com/jonsnow231/minial-resources-zim
+
+*********************
+
+
+Zim instructions for Portable on Windows: 
+
+
+  1) Add folder with .css and assets to Zim\share\themes\
+  2) Go to Zim\etc\gtk-3.0\settings.ini  (create directory and .ini file if it doesn't exist) and input:
+      [Settings]
+      gtk-theme-name = minimal-resources
+      gtk-application-prefer-dark-theme=1
+	   
+(There should be a gtk.css file and gtk-dark.css file for most themes, the input above makes sure it uses the gtk-dark file)
+
+  3) Go to Zim\config\zim\style.conf and change the following:
+      [Tag mark]
+      background=#3d4468
+	  
+	  [Tag link]
+      foreground=lightblue
+	  
+	  (the following are optional, if you want different colored headings) 
+	  
+	  [Tag h2]
+	  foreground=#b86b09
+	  (don't delete anything below, just change the color of foreground)
+	  
+	  [Tag h3]
+      foreground=#495ac7
+	  
+	  [Tag h4]
+      foreground=#c749bd
+	  
+	  [Tag h5]
+      foreground=#3bac9c
+	  
+	  [Tag h6]
+      foreground=#7a3bac
+	  
+	  
+DONE. 
+
+*********************
+*********************
+ 
+For installed if this doesn't work, try putting in %appdata% instead of directory.
+
+
+change to following to help adapt to any background color, adjusting value for transparency: 
+alpha(CurrentColor, 0.3)
+
+
+Assets edited from https://github.com/astrit/css.gg using https://www.svgviewer.dev/ 
+
+Code adapted from https://docs.gtk.org and random gtk themes, primarily https://github.com/vinceliuice/Graphite-gtk-theme
+*/
+
+
+
+
+/*****
+Body
+*****/
+
+/* Changes text highlight color */
+
+entry selection, label selection, textview text selection:focus, textview text selection, widget.view:selected, .view:selected {
+  color: #000000;
+  background-color: #dcdcdc;
+}
+
+
+
+
+/* Colors index pane (background-color) and text (color) */
+.view {
+background-color: #000000;
+color: #a5a57f;
+}
+
+
+
+/* sets background color of main body */
+textview text {
+background-color: #000000;
+}
+
+
+
+
+
+/* Changes Index/ToC border and header background colors */
+notebook > header {
+border: none;
+background-color: #000000;
+padding: 1px;
+margin: 1px;
+border-radius: 2px;
+}
+
+
+
+
+/* Sets size and color of border around Index/ToC body */
+notebook > stack:not(:only-child) {
+background-color: #2a2a2a;
+border-radius: 3px;
+}
+
+
+.background {
+/* Changes menu popup backgrounds */
+background-color: #0f0f0f; 
+/* Changes cursor and some menu colors */
+color: #ffffff
+}
+
+
+
+/* Changes Index/ToC border and header background colors */
+/*
+notebook, notebook.frame {
+background-color: #2a2a2a;
+border-radius: 2px;
+}
+*/
+
+
+/* Changes overall font size and type */
+/*
+box * {
+  font: 14px initial;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****
+BUTTONS
+*****/
+
+
+
+
+
+
+/* Changes the color of some disabled menu buttons */
+button:disabled {
+background-color: rgba(255, 255, 255, 0.04);
+color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+/* changes color of active tab */
+button:checked {
+background-color: #e4e4e4;
+color: #131313;
+}
+
+
+
+
+
+
+
+/* changes size of menu headers */
+button {
+min-height: 24px;
+min-width: 16px;
+padding: 6px 10px;
+border-radius: 6px;
+font-weight: 500;
+}
+
+
+
+/* sets size of buttons at the top */
+button.image-button {
+min-width: 36px;
+padding: 1px;
+}
+
+
+
+/* Changes size and color of line separator between buttons and context menu */ 
+separator {
+min-width: 1px;
+min-height: 1px;
+background-color: #5d5d5d;
+}
+
+
+
+
+/* Changes button/menu text color and background color */
+/*
+button {
+transition: none;
+outline: none;
+box-shadow: none;
+background-color: #transparent;
+background-image: none;
+color: #FFFFFF;
+}
+*/
+
+
+
+
+
+/* Changes color of selected menu button (can also add: background-color: #000000)*/ 
+/*
+button:active {
+box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.2);
+}
+*/
+
+
+
+
+/* Changes constant background and icon color of selectable header icons */
+/*
+button.flat {
+outline: none;
+box-shadow: inset 0 0 0 9999px transparent;
+background-color: #FF0000;
+color: #FF0000;
+ */
+
+
+
+
+
+/* Change color of disabled buttons */
+/*
+button.flat:disabled {
+box-shadow: none;
+background-color: transparent;
+color: rgba(255, 255, 255, 0.3)
+}
+*/
+
+
+
+
+
+/* sets width and padding of menu button heaaders */
+/*
+button.text-button {
+min-width: 32px;
+padding-left: 16px;
+padding-right: 16px;
+}
+*/
+
+
+/* Changes constant background and icon color of icons */
+/*
+button.flat {
+outline: none;
+box-shadow: inset 0 0 0 9999px transparent;
+background-color: #FF0000;
+color: #FF0000;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****
+Checkmarks
+*****/
+
+
+
+/* Sets color of checked objects in pop up menu */
+check:checked, check:indeterminate {
+color: #999999;
+}
+
+
+/* Sets color of checked objects in pop up menu */
+check:checked:disabled, check:indeterminate:disabled {
+color: #5a5a5a;
+}
+
+
+
+
+/* sets padding between check marks and text in menu */
+menu menuitem check:dir(ltr) {
+margin-right: 20px;
+}
+
+menu menuitem check:dir(rtl), menu menuitem radio:dir(rtl) {
+margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+/* adds icons for check marks */ 
+check {
+-gtk-icon-source: -gtk-recolor(url("assets/white/square-white.svg"));
+}
+
+
+
+
+check:checked {
+-gtk-icon-source: -gtk-recolor(url("assets/white/checkmarksquare-white.svg"));
+}
+
+
+
+
+
+/* Sets color of some checkmarks such as available plugins */
+/*
+treeview.view check {
+padding: 0;
+color: #d6d6d6;
+}
+*/
+
+
+
+
+/* Sets color of disabled check boxes in pop up menu */
+/*
+treeview.view check:disabled {
+color: #6c0000;
+}
+*/
+
+
+/* Sets color of checked check boxes in pop up menu */
+/*
+treeview.view check:checked, treeview.view check:indeterminate {
+color: #dfdfdf;
+}
+*/
+
+
+
+
+/* Sets color of menu check boxes on hover */
+treeview.view check:hover, treeview.view check:selected {
+box-shadow: none;
+background-color: #adadad;
+}
+
+
+
+
+
+
+
+
+
+
+/* Changes constant background and icon color of checkmarks */ 
+
+check {
+outline: none;
+box-shadow: inset 0 0 0 9999px transparent;
+background-color: alpha(currentColor, 0.4);
+color: #ffffff;
+}
+
+
+
+
+
+
+/* changes background color of entire row of checked items */
+/*
+checkbutton:checked {
+  background-color: rgba(255, 255, 255, .3);
+}
+*/
+
+
+
+/* sets menu unchecked color */ 
+/*
+menu menuitem check:not(:checked):not(:indeterminate):not(:disabled) {
+color: #bdbdbd;
+}
+*/
+
+
+/* sets menu unchecked hover color */
+/*
+menu menuitem check:not(:checked):not(:indeterminate):not(:disabled):hover {
+color: #d4d4d4;
+}
+/*
+
+
+
+/* sets menu checked hover color */ 
+/*
+menu menuitem check, menu menuitem check:hover, menu menuitem check:disabled{
+box-shadow: none;
+color: #d4d4d4;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****
+Links
+*****/
+
+
+
+
+/* Changes color of links inside menus (not in notebook) */
+button.link:link, button.link:link:focus, button.link:link:hover, button.link:link:active {
+color: #78c3cf;
+}
+
+/* Changes color of visited links inside menus */
+button.link:visited, button.link:visited:focus, button.link:visited:hover, button.link:visited:active {
+color: #789dcf;
+}
+
+/* adds underline to links inside menus */
+button.link > label {
+text-decoration-line: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****
+Scrollbar
+*****/
+ 
+ 
+ 
+
+
+/* sets color of scroll bar */ 
+scrollbar slider {
+min-width: 8px;
+min-height: 8px;
+border: 4px 3d3d3d;
+border-radius: 9999px;
+background-clip: none;
+background-color: #32432e;
+}
+
+
+/* sets color of scroll bar on hover */ 
+scrollbar slider:hover {
+background-color: #445b3e;
+}
+
+/* sets color of scroll bar on click/drag */ 
+scrollbar slider:active {
+background-color: #445b3e;
+}
+
+
+
+/* Changes background color of scroll bar */ 
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
+border-color: #181818;
+background-color: #181818;
+}
+
+
+
+
+
+
+/* Changes scrollbar background color when sliding and hovering */
+scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
+background-color: #2a2a2a;
+}
+
+
+/* Sets minimum width of horizontal scroll bar */
+scrollbar.horizontal slider {
+min-width: 20px;
+}
+
+
+/* Sets minimum width of vertical scroll bar */
+scrollbar.vertical slider {
+min-height: 20px;
+}
+
+
+/* Sets width of scroll bar background */
+scrollbar button {
+min-width: 16px;
+min-height: 20px;
+padding: 0;
+border-radius: 1;
+}
+
+
+/* Sets arrow icons for scroll bars */
+scrollbar.vertical button.down {
+-gtk-icon-source: -gtk-recolor(url("assets/white/chevrondown-white.svg"));
+}
+
+scrollbar.vertical button.up {
+-gtk-icon-source: -gtk-recolor(url("assets/white/chevronup-white.svg"));
+}
+
+scrollbar.horizontal button.down {
+-gtk-icon-source: -gtk-recolor(url("assets/white/chevronright-white.svg"));
+}
+
+scrollbar.horizontal button.up {
+-gtk-icon-source: -gtk-recolor(url("assets/white/chevronleft-white.svg"));
+}
+
+
+/* changes color and size of border around scroll bar when not in use */
+/*
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
+min-width: 4px;
+min-height: 4px;
+margin: 2px;
+border: 1px solid #FF0000;
+}
+*/
+
+
+/* changes color of top bar of scroll bar */
+/*
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) button:disabled {
+background-color: #000000;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****
+Frames
+*****/
+
+
+ 
+/* Changes most frame color and size for notebooks and opening new notebooks */
+frame > border,
+.frame {
+margin: 0;
+padding: 0;
+border: 1px solid #5a5959;
+border-radius: 0;
+box-shadow: none;
+}
+
+
+/* Chages frames in certain pop ups */
+actionbar > revealer > box {
+padding: 6px;
+border-top: 1px solid #5a5959;
+background-color: #000000;
+background-clip: none;
+}
+
+
+/* Changes color/size of separator near custom font in preferences. May affect separators elsewhere (set size back to 1px)  */
+button.font separator, button.file separator {
+min-width: 1px;
+min-height: 1px;
+background-color: #5d5d5d;
+}
+
+
+
+/* adds animation that shows you are at the top of the document when scrolling up */
+/*
+overshoot.top {
+background-image: -gtk-gradient(radial, center top, 0, center top, 0.75, to(rgba(219, 222, 229, 0.24)), to(transparent));
+background-repeat: no-repeat;
+background-position: center top;
+background-color: transparent;
+border: none;
+box-shadow: none;
+}
+*/
+
+/* adds animation that shows you are at the top of the document when scrolling down */
+/*
+overshoot.bottom {
+  background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.75, to(rgba(219, 222, 229, 0.24)), to(transparent));
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+*/
+
+/* adds animation that shows you are at the edge of the document when scrolling left */
+/*
+overshoot.left {
+background-image: -gtk-gradient(radial, left center, 0, left center, 0.75, to(rgba(219, 222, 229, 0.24)), to(transparent));
+background-repeat: no-repeat;
+background-position: left center;
+background-color: transparent;
+border: none;
+box-shadow: none;
+}
+*/
+
+
+/* adds animation that shows you are at the edge of the document when scrolling right */
+/*
+overshoot.right {
+background-image: -gtk-gradient(radial, right center, 0, right center, 0.75, to(rgba(219, 222, 229, 0.24)), to(transparent));
+background-repeat: no-repeat;
+background-position: right center;
+background-color: transparent;
+border: none;
+box-shadow: none;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****
+Files/Directory
+*****/
+
+
+/* Changes path bar menu color for file type (can make transparent) */
+filechooser actionbar, filechooser actionbar > revealer > box {
+background-color: #4e4e4e;
+}
+
+
+/* Changes path bar headers colors when opening files */
+/*
+filechooser #pathbarbox {
+border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+background-color: #313744;
+}
+*/
+
+/* Changes path bar headers colors when opening files */
+/*
+filechooser stack.view {
+background-color: transparent;
+padding: 0;
+}
+*/
+
+/* Changes path bar headers colors when opening files */
+/*
+filechooser stack.view scrolledwindow {
+background-color: transparent;
+border-radius: 0 0 12px 0;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****
+Sidebar
+*****/
+ 
+ 
+/* Changes border in some menus like import files */
+/*
+.sidebar {
+border-style: solid;
+border-width: 0 1px 1px;
+border-color: rgba(255, 255, 255, 0.12);
+background-color: #2b303b;
+}
+*/
+
+
+
+/* Changes color of directories when opening files such as importing */
+/*
+.sidebar list {
+background-color: transparent;
+}
+*/
+
+
+
+
+
+
+ 
+/* Changes color of directories color icons when choosing files such as importing */
+/*
+row image.sidebar-icon {
+transition: color 75ms cubic-bezier(0, 0, 0.2, 1);
+color: rgba(255, 255, 255, 0.7);
+}
+*/
+
+
+
+/* Sets padding of vertical sidebar for file chooser such as when importing file. */
+/*
+placessidebar.sidebar list {
+padding: 6px;
+}
+*/
+
+/* creates padding of vertical sidebar for file chooser such as when importing file. */
+placessidebar.sidebar row > revealer {
+padding: 0 8px 0 16px;
+}
+
+
+/* changes size of directory items on left sidebar of file chooser such as when importing a file */
+placessidebar.sidebar row {
+min-height: 32px;
+margin: 0;
+padding: 0;
+border-radius: 6px;
+}
+
+
+
+/* Changes color of selected directory background in file chooser */
+placessidebar.sidebar row:selected {
+  background-color: #e6e6e6;
+  font-weight: 500;
+}
+
+
+/* Changes color of selected icon in file chooser */
+placessidebar.sidebar row:selected, placessidebar.sidebar row:selected image.sidebar-icon, placessidebar.sidebar row:selected button.sidebar-button {
+color: #151515;
+}
+
+
+
+
+/* Padding between directory icon and directory text in file chooser */
+
+placessidebar.sidebar row image.sidebar-icon:dir(ltr) {
+padding-right: 8px;
+}
+
+
+/* Padding between directory sidebar and files in file chooser */
+/*
+placessidebar.sidebar row image.sidebar-icon:dir(rtl) {
+padding-left: 8px;
+}
+*/
+
+
+
+/* Changes color of directory text in file chooser */
+/*
+placessidebar.sidebar row label.sidebar-label {
+color: inherit;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****
+Menus
+*****/
+
+
+
+
+
+/* Highlights selected rows in menus */
+.view:selected {
+color: #000000;
+background-color: #e6e6e6;
+}
+
+
+/* sets hover highlight for rows in menu/index */
+.view:hover {
+box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.3);
+}
+
+ 
+
+
+
+/* Padding in menu bar and background color of menu bar */
+menubar,
+.menubar {
+padding: 0;
+background-color: #000000;
+}
+
+
+
+
+
+/* Padding between menu bar items and color of menu bar text */
+menubar > menuitem,
+.menubar > menuitem {
+padding: 8px;
+color: #ffffff;
+}
+
+
+
+/* Changes color of menu bar item selected */
+menubar > menuitem:hover,
+.menubar > menuitem:hover {
+background-color: #ffffff;
+color: #000000;
+}
+
+
+
+
+
+
+/* Changes context menu color and padding */
+menu,
+.menu,
+.context-menu {
+margin: 3px;
+padding: 6px;
+background-color: #1d1d1d;
+border-radius: 8px;
+border: 1px solid #dbdee5;
+}
+
+
+/* styles drop-down and context-menu */
+menu menuitem,
+.menu menuitem,
+.context-menu menuitem {
+min-height: 20px;
+min-width: 40px;
+padding: 4px 8px;
+color: white;
+font: initial;
+text-shadow: none;
+border-radius: 6px;
+}
+
+
+
+/* Changes color of menu items when hovering */
+menu menuitem:hover,
+.menu menuitem:hover,
+.context-menu menuitem:hover {
+background-color: alpha(CurrentColor, 0.4);
+color: #ffffff;
+}
+
+
+
+
+
+
+/* Changes color of disabled menu items */
+menu menuitem:disabled,
+.menu menuitem:disabled,
+.context-menu menuitem:disabled {
+color: alpha(CurrentColor, 0.4);
+}
+
+
+
+/* Changes color of disabled menu item hotkeys */
+menu menuitem:disabled accelerator,
+.menu menuitem:disabled accelerator,
+.context-menu menuitem:disabled accelerator {
+color: alpha(CurrentColor, 0.4);
+}
+
+
+/* adds right-facing arrow to some menu items */
+menu menuitem arrow:dir(ltr),
+.menu menuitem arrow:dir(ltr),
+.context-menu menuitem arrow:dir(ltr) {
+-gtk-icon-source: -gtk-recolor(url("assets/white/chevronright-white.svg"));
+margin-left: 8px;
+}
+
+
+
+/* adds left-facing arrow to some menu items */
+menu menuitem arrow:dir(rtl),
+.menu menuitem arrow:dir(rtl),
+.context-menu menuitem arrow:dir(rtl) {
+-gtk-icon-source: -gtk-recolor(url("assets/white/chevronleft-white.svg"));
+margin-right: 8px;
+}
+
+
+/* Changes size of arrows inside menus and context menu */
+menu menuitem arrow,
+.menu menuitem arrow,
+.context-menu menuitem arrow {
+min-height: 16px;
+min-width: 16px;
+}
+
+
+/* Changes color of hover over some menu items/headers  */
+treeview.view header button:hover, row.activatable:hover {
+box-shadow: inset 20 20 20 9999px alpha(CurrentColor, 0.5);
+}
+
+
+/* Adds buffer between menu items */
+menu separator,
+.menu separator,
+.context-menu separator {
+margin: 6px 2;
+}
+
+
+
+
+
+
+/* Changes padding for menu headers and adds color to some unselected menu headers */
+tabbox > tab, notebook > header tab {
+min-height: 16px;
+min-width: 16px;
+padding: 2px 12px;
+border: none;
+outline: none;
+background-clip: none;
+color: #ffffff;
+font-weight: 800;
+border-radius: 2px;
+}
+
+
+/* Changes cover of pop up menu headers when you hover over them */
+tabbox > tab:hover, notebook > header tab:hover {
+background-color: alpha(CurrentColor, 0.3);
+color: #ffffff;
+}
+
+
+
+
+
+
+/* Changes color of headers that are selected */
+tabbox > tab:checked, notebook > header tab:checked {
+transition: none;
+background-color: #303030;
+color: #ffffff;
+box-shadow: none;
+}
+
+
+
+
+
+
+/* outlines menu drop downs and context menu */
+.csd.popup decoration {
+border-radius: 12px;
+border-radius: 14px;
+border: 2px solid #a6a6a6;
+background-clip: border-box;
+}
+
+
+
+/* Changes color of menu bar when not in focus */
+/*
+menubar:backdrop,
+.menubar:backdrop {
+background-color: #0c0c0c;
+}
+*/
+
+
+/* Changes color of some menu items */
+/*
+combobox {
+  color: @fg_color;
+  background-color: #ff0000;
+}
+*/
+
+
+
+/* Changes background of some menu headers.  */ 
+/*
+treeview.view header button, row.activatable {
+outline: none;
+box-shadow: inset 0 0 0 9999px #1d1d1d;
+background-image: none;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 1000% 1000%;
+}
+*/
+
+
+
+/* Changes background of some more obscure menu headers, such as when importing page */ 
+/*
+row.activatable:focus {
+  box-shadow: inset 0 0 0 9999px #cecece;
+}
+*/
+
+
+
+
+
+/* Changes color of menu item text */
+/*
+menu menuitem label:dir(rtl), menu menuitem label:dir(ltr),
+.menu menuitem label:dir(rtl),
+.menu menuitem label:dir(ltr),
+.context-menu menuitem label:dir(rtl),
+.context-menu menuitem label:dir(ltr) {
+color: inherit;
+}
+*/
+
+
+
+
+
+/* Highlights selected rows in menus */
+/*
+row:selected, treeview.view:selected:not(.progressbar):not(.trough), 
+.menuitem.button.flat:selected {
+  color: #ffffff;
+  background-color: #FF0000;
+}
+*/
+
+
+
+
+
+/* Changes color of menu item hotkeys displayed when hovering */
+/*
+menu menuitem:hover accelerator,
+.menu menuitem:hover accelerator,
+.context-menu menuitem:hover accelerator {
+color: #f5fc7d;
+}
+*/
+
+
+/* Changes color of menu item hotkeys displayed (overrides hovering probably) */
+/*
+menu menuitem accelerator,
+.menu menuitem accelerator,
+.context-menu menuitem accelerator {
+  color: #f5fc7d;
+} 
+*/
+
+
+/* adds outline to pop-ups */
+/*
+.popup decoration {
+box-shadow: 0 10px 1px #FF0000, 0 1px 3px #FF0000, inset 0 1px #FF0000;
+}
+*/
+
+
+
+
+/* Changes color and background color of all menu labels/text */
+/*
+window label {
+  background-color: transparent;
+  color: #ff0000
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****
+Paned
+*****/
+ 
+ 
+/* size and color of separator between notebook and index and other vertical separators in menu */
+/*
+paned > separator {
+min-width: 1px;
+min-height: 1px;
+-gtk-icon-source: none;
+border-style: none;
+background-color: transparent;
+background-image: image(rgba(255, 255, 255, 0.12));
+background-size: 1px 1px;
+background-clip: content-box;
+}
+*/
+
+
+
+
+
+/* changes size/position of vertical separators, such as in pop-up menus or between note and index. */
+/*
+paned.horizontal > separator:dir(ltr) {
+margin: 0 -8px 0 0;
+padding: 0 8px 0 0;
+background-position: left;
+}
+*/
+
+
+/* changes size/position of horizontal separators, such as in pop-up menus or between note and index. (may not be present in ZIM) */
+/*
+paned.horizontal > separator:dir(rtl) {
+margin: 0 0 0 -8px;
+padding: 0 0 0 8px;
+background-position: right;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
