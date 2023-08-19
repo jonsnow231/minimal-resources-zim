@@ -7,23 +7,23 @@ Custom theme for Zim. Only 10kb including assets. Absolute black backgrounds and
 
 Zim instructions for Portable on Windows: 
 
-
-  1) Add minimal-resources folder with .css and assets to Zim\share\themes\
-  2) Go to Zim\etc\gtk-3.0\settings.ini  (create directory and .ini file if it doesn't exist) and input:
+  1) Unzip the source. All you need is the minimal-resources folder.
+  2) Add minimal-resources folder with .css and assets to Zim\share\themes\
+  3) Go to Zim\etc\gtk-3.0\settings.ini  (create directory and .ini file if it doesn't exist) and input:
       [Settings]
       gtk-theme-name = minimal-resources
       gtk-application-prefer-dark-theme=1
 	   
 (There should be a gtk.css file and gtk-dark.css file for most themes, the input above makes sure it uses the gtk-dark file)
 
-  3) Go to Zim\config\zim\style.conf and change the following:
+  4) Go to Zim\config\zim\style.conf and change the following:
       [Tag mark]
       background=#3d4468
 	  
 	  [Tag link]
       foreground=lightblue
 	  
-	  (the following are optional, if you want different colored headings) 
+	  (the following are **optional**, if you want different colored headings) 
 	  
 	  [Tag h2]
 	  foreground=#b86b09
