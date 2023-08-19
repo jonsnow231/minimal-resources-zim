@@ -45,6 +45,13 @@ Zim instructions for Portable on Windows:
 DONE. 
 
 *********************
-*********************
+
  
 If you installed on system, if this doesn't work, try putting in %appdata% instead of zim directory.
+
+
+
+********************
+
+
+Extra folder contains more CSS to alter zim more, as well as black assets for light themes. 
