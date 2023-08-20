@@ -14,7 +14,7 @@ Zim instructions for Portable on Windows:
       gtk-theme-name = minimal-resources
       gtk-application-prefer-dark-theme=1
 	   
-(There should be a gtk.css file and gtk-dark.css file for most themes, the input above makes sure it uses the gtk-dark file)
+(There should be a gtk.css file and gtk-dark.css file for most themes, the input above first says to use minimal-resources theme, and then says to prefer dark themes if more than one .css is in the theme.)
 
   4) Go to Zim\config\zim\style.conf and change the following:
       [Tag mark]
