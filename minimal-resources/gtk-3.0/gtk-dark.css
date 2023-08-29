@@ -453,7 +453,17 @@ menu separator,
 margin: 6px 2;
 }
 
-
+/* size and color of separator between notebook and index and other vertical separators in menu */
+paned > separator {
+min-width: 1px;
+min-height: 1px;
+-gtk-icon-source: none;
+border-style: none;
+background-color: transparent;
+background-image: image(rgba(255, 255, 255, 0.12));
+background-size: 1px 1px;
+background-clip: content-box;
+}
 
 
 /* Changes padding for menu headers and adds color to some unselected menu headers */
