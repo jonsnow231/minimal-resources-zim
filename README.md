@@ -40,7 +40,12 @@ Zim instructions for Portable on Windows:
 	  
 	  [Tag h6]
       foreground=#7a3bac
-	  
+
+   If you want to make bold text easier to see, add a scale modifier in the same config file:
+   
+	[Tag strong]
+	weight=PANGO_WEIGHT_BOLD
+	scale=1.07
 	  
 DONE. 
 
