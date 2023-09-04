@@ -47,7 +47,8 @@ Zim instructions for Portable on Windows:
 	[Tag strong]
 	weight=PANGO_WEIGHT_BOLD
 	scale=1.07
-	  
+
+  5) Go to edit >preferences > Uncheck "show controls in window decoration" (I did not have this on when setting it up, so I will have to go through and find the css that affects this. I find it unnecessary though as it just decreases the amount of workspace. 
 DONE. 
 
 *********************
