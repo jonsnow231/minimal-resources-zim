@@ -16,7 +16,7 @@ Zim instructions for Portable on Windows:
 	   
 (There should be a gtk.css file and gtk-dark.css file for most themes (this one only uses dark), the input above first says to use minimal-resources theme, and then says to prefer dark themes if more than one .css is in the theme.)
 
-  4) Go to Zim\config\zim\style.conf and change the following:
+  4) Go to Zim\config\zim\style.conf and change the following (ZIM must be restarted to see any changes in the config file):
 
      	 [Tag mark]
 	background=#3d4468
@@ -54,6 +54,8 @@ Zim instructions for Portable on Windows:
 	foreground=#ecea80
 
   5) Go to edit >preferences > Uncheck "show controls in window decoration" (I did not have this on when setting it up, so I will have to go through and find the css that affects this. I find it unnecessary though as it just decreases the amount of workspace. 
+
+
 DONE. 
 
 *********************
