@@ -42,11 +42,16 @@ Zim instructions for Portable on Windows:
 	  [Tag h6]
      	 foreground=#7a3bac
 
-   If you want to make bold text easier to see, add a scale modifier in the same config file:
+   If you want to make bold and italic text stand out more, you can add a scale or color modifier in the same config file:
    
 	[Tag strong]
 	weight=PANGO_WEIGHT_BOLD
-	scale=1.07
+	scale=1.05
+	foreground=#ecea80
+
+	[Tag emphasis]
+	style=PANGO_STYLE_ITALIC
+	foreground=#ecea80
 
   5) Go to edit >preferences > Uncheck "show controls in window decoration" (I did not have this on when setting it up, so I will have to go through and find the css that affects this. I find it unnecessary though as it just decreases the amount of workspace. 
 DONE. 
