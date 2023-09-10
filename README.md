@@ -42,7 +42,7 @@ Zim instructions for Portable on Windows:
 	  [Tag h6]
      	 foreground=#7a3bac
 
-   If you want to make bold and italic text stand out more, you can add a scale or color modifier in the same config file:
+   If you want to make bold and italic text stand out more, you can add a scale or color modifier in the same config file (note that changing the color here will change the color of headings if you also bold/italicize headings for some reason):
    
 	[Tag strong]
 	weight=PANGO_WEIGHT_BOLD
