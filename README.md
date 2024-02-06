@@ -69,3 +69,8 @@ If you installed Zim rather than using portable, if this doesn't work, try putti
 
 
 Extra folder contains more CSS to alter zim more, as well as black assets for light themes. 
+
+
+_____
+
+The text was updated to #d5d5a5 to make it lighter to control how bright it is with screen dimness. If you want it muted for screens at 200-300 nits, try #a5a57f
